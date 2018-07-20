@@ -1,2 +1,2 @@
 # Lottery649
-運用Underscore、Backbone、jQuery、Bootstrap套件，完成使用性方便的POS操作系統。利用locatStorage空間儲存資料，保存使用者資料儲存空間，對於個人飲料店來說，可以算是一個基本的計帳系統。
+運用Underscore、Backbone、jQuery、Bootstrap、Highcharts套件完成大樂透獎號統計資料，純粹只是一個基本的統計觀察程式。
