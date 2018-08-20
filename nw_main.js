@@ -32,19 +32,10 @@
 var win = nw.Window.open('index.html', {
 
 	// "toolbar": true,
-	// "title": "Hello",
-	"inject_js_start": "nw_start.js",
-	"frame": true,
+	"icon": "icons/favicon.ico",
 	"width": 800,
-	"height": 600
+	"height": 600,
+	"inject_js_start": "nw_inject_start.js",
+	"inject_js_end": "nw_inject_end.js",
+	"frame": true
 });
-
-/*
-win.on('loaded', function() {
-
-  // the native onload event has just occurred
-  var document = win.window.document;
-	
-	console.log('win on loaded');
-});
-*/
