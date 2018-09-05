@@ -95,7 +95,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 
 					view.addDropdownMenu({
 
-						"menuCaption": "載入資料",
+						"menuCaption": "資料篩選",
 						"items": [
 							{
 								"caption": "選取號碼",
