@@ -98,22 +98,6 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 						"menuCaption": "載入資料",
 						"items": [
 							{
-								"caption": "From File",
-								"click": function(event) {
-
-									jQuery('.collapse').collapse('hide');
-
-									FormUtils.selectFileModal({
-
-										"title": "選取檔案",
-										"callback": function(file) {
-
-											if (file != null) view.loadDataFromCSVFile(file);
-										}
-									});
-								}
-							},
-							{
 								"caption": "選取號碼",
 								"id": btnLottery649NumPadId,
 								"click": function(event) {
@@ -367,6 +351,35 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 							}
 						]
 					});
+					
+					FormUtils.showLoadingEffect(
+					
+						function(closeLoadingEffect) {
+						
+							var url = 'https://script.google.com/macros/s/AKfycbwISkmpTFPRT0i-3nqBvsi_JNGiz95jYdtIv1_h/exec';
+							
+							jQuery.getJSON(url, function(data, textStatus, jqXHR) {
+							
+								if (data["error_code"] == 0) {
+			
+									view.setArrCheckedNum([]);
+									
+									view.loadDataFromJSONArray(data["result"], function() {
+									
+										closeLoadingEffect();
+										
+										window.scrollTo(0, document.body.scrollHeight);
+									});
+								}
+								else {
+
+									closeLoadingEffect();
+						
+									FormUtils.showMessage('資料處理過程有誤，錯誤訊息：' + data['error_message']);
+								}
+							});
+						}
+					);
 				});
 			});
 		});	// document ready
