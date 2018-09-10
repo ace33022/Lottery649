@@ -38,21 +38,14 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 			
 				requirejs(["tw.ace33022.backbone.view.MSC00010", "tw.ace33022.util.StringUtils"], function(View, StringUtils) {
 				
-					var appId = 'appId' + Math.random().toString(36).substr(2, 6);
-
-					var view;
-
 					var btnLottery649NumPadId = 'btnLottery649NumPad' + Math.random().toString(36).substr(2, 6);
 					var chart01Id = 'chart01' + Math.random().toString(36).substr(2, 6);
 					var chart02Id = 'chart02' + Math.random().toString(36).substr(2, 6);
 					var report01Id = 'report01' + Math.random().toString(36).substr(2, 6);
 					var dataFilterId = 'dataFilter01' + Math.random().toString(36).substr(2, 6);
 
-					jQuery('body').append('<div id="' + appId + '" class="container-fluid"></div>');
+					var view = new View({
 
-					view = new View({
-
-						"el": '#' + appId,
 						"buttonAddedTrigger": function() {
 
 							if (this.getArrLottery649LogsVO().length == 0) {
@@ -92,7 +85,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 							}
 						}
 					});
-
+					
 					view.addDropdownMenu({
 
 						"menuCaption": "資料篩選",
@@ -380,6 +373,8 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 							});
 						}
 					);
+
+					// window.scrollbars.visible = false;
 				});
 			});
 		});	// document ready
