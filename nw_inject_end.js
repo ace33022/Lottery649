@@ -345,6 +345,67 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 						]
 					});
 					
+					view.addDropdownMenu({
+
+						"menuCaption": "其它",
+						"items": [
+							{
+								"caption": "關於",
+								"click": function(event) {
+
+									FormUtils.showAbout();
+								}
+							},
+							{
+								"caption": "建議/問題反應",
+								"click": function(event) {
+
+									FormUtils.showTextareaModal({
+									
+										"title": "建議事項／問題回報",
+										"callback": function(data) {
+										
+											var ajaxSettings = {
+										
+												// "contentType": "application/json; charset=utf-8",
+												"dataType": "json",
+												"url": "https://script.google.com/macros/s/AKfycbzZhqYzi19HEWCuTY6HyzwtbLBJlUbzC3vOZ831/exec",
+												"data": data,
+												"type": "POST",
+												"success": function(data, textStatus, jqXHR) {
+											
+													if (data["error_code"] == 0) {
+												
+														// FormUtils.showMessage('感謝提供建議或問題反應！！');
+													}
+													else {
+												
+														// show error message
+													}
+												},
+												"error": function(jqXHR, textStatus, errorThrown) {
+											
+													// show error message
+												}
+											};
+										
+											if (data === '') {
+											
+												FormUtils.showMessage('內容空白？！', function() { jQuery(event.target).trigger('click'); });
+											}
+											else {
+											
+												jQuery.ajax(ajaxSettings);
+												
+												FormUtils.showMessage('感謝提供建議或問題反應！！');
+											}
+										}
+									});
+								}
+							}
+						]
+					});
+
 					FormUtils.showLoadingEffect(
 					
 						function(closeLoadingEffect) {
@@ -353,15 +414,13 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 							
 							jQuery.getJSON(url, function(data, textStatus, jqXHR) {
 							
-								if (data["error_code"] == 0) {
+								if (data["error_code"] === 0) {
 			
 									view.setArrCheckedNum([]);
 									
 									view.loadDataFromJSONArray(data["result"], function() {
 									
 										closeLoadingEffect();
-										
-										window.scrollTo(0, document.body.scrollHeight);
 									});
 								}
 								else {
@@ -373,8 +432,6 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 							});
 						}
 					);
-
-					// window.scrollbars.visible = false;
 				});
 			});
 		});	// document ready
