@@ -420,6 +420,8 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 									
 									view.loadDataFromJSONArray(data["result"], function() {
 									
+										view.getContainer().find('tbody').parent().parent().scrollTop(view.getContainer().find('tbody').parent().parent()[0].scrollHeight);
+									
 										closeLoadingEffect();
 									});
 								}
