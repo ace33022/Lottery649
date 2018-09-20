@@ -423,7 +423,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 										var tag = '<div class="row">'
 														+ '  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'
 														+ '  <!-- ToolGroup -->'
-														+ '  <ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-2244483882494685"	data-ad-slot="7390066670"	data-ad-format="auto" data-full-width-responsive="true"></ins>'
+														+ '  <ins class="adsbygoogle" style="display: block; width: 90%;" data-ad-client="ca-pub-2244483882494685"	data-ad-slot="7390066670"	data-ad-format="auto" data-full-width-responsive="true"></ins>'
 														+ '  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>'
 														+ '</div>';
 									
