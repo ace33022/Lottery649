@@ -432,6 +432,8 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 										view.appendRow(tag);
 									
 										closeLoadingEffect();
+										
+										jQuery(window).trigger('resize');
 									});
 								}
 								else {
