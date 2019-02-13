@@ -1,28 +1,37 @@
 /**
  *
- * Lottery649
- *
- * @description
+ * @description Lottery649
  *
  * @version 2018/08/05 初始版本。
  *
  * @author ace
  *
- * @see <a href="http://requirejs.org/">RequireJS</a>
+ * @see {@link http://requirejs.org/|RequireJS}
  *
- * @see <a href="https://jquery.com/">jQuery</a>
+ * @see {@link https://jquery.com/|jQuery}
  *
- * @see <a href="http://underscorejs.org/">Underscore.js</a>
- * @see <a href="https://github.com/jashkenas/underscore">jashkenas/underscore: JavaScript's utility _ belt</a>
- * @see <a href="http://backbonejs.org/">Backbone.js</a>
- * @see <a href="https://github.com/jashkenas/backbone">jashkenas/backbone: Give your JS App some Backbone with Models, Views, Collections, and Events</a>
- * @see <a href="https://github.com/jashkenas/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">Tutorials, blog posts and example sites · jashkenas/backbone Wiki</a>
+ * @see {@link https://getbootstrap.com/|Bootstrap · The most popular HTML, CSS, and JS library in the world.}
  *
- * @see <a href="https://getbootstrap.com/">Bootstrap · The most popular HTML, CSS, and JS library in the world.</a>
+ * @see {@link http://underscorejs.org/|Underscore.js}
+ * @see {@link https://github.com/jashkenas/underscore|jashkenas/underscore: JavaScript's utility _ belt}
  *
- * @comment
+ * @see {@link http://backbonejs.org/|Backbone.js}
+ * @see {@link https://github.com/jashkenas/backbone|jashkenas/backbone: Give your JS App some Backbone with Models, Views, Collections, and Events}
+ * @see {@link https://github.com/jashkenas/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites|Tutorials, blog posts and example sites · jashkenas/backbone Wiki}
  *
- * @todo
+ * @see {@link https://api.jquery.com/attribute-equals-selector/|Attribute Equals Selector [name=”value”] | jQuery API Documentation}
+ * @see {@link https://api.jquery.com/multiple-attribute-selector/|Multiple Attribute Selector [name=”value”][name2=”value2″] | jQuery API Documentation}
+ *
+ * @see {@link https://github.com/tristen/tablesort|tristen/tablesort: A small tablesorter in plain JavaScript}
+ *
+ * @see {@link https://www.highcharts.com/|Interactive JavaScript charts for your webpage | Highcharts}
+ *
+ * @see {@link https://learn.jquery.com/using-jquery-core/faq/how-do-i-disable-enable-a-form-element/|How do I disable/enable a form element? | jQuery Learning Center}
+ * @see {@link http://zh-tw.learnlayout.com/display.html|CSS - 關於 "display" 屬性}
+ * @see {@link https://stackoverflow.com/questions/4942070/differences-between-detach-hide-and-remove-jquery|javascript - Differences between detach(), hide() and remove() - jQuery - Stack Overflow}
+ *
+ * @see {@link https://stackoverflow.com/questions/18432394/how-to-make-twitter-bootstrap-modal-full-screen|css - How to make Twitter bootstrap modal full screen - Stack Overflow}
+ * @see {@link https://stackoverflow.com/questions/35177128/radio-buttons-in-bootstrap-navigation-bar|css - Radio buttons in bootstrap navigation bar - Stack Overflow}
  *
  */
 
